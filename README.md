@@ -10,4 +10,5 @@ deploy link:- https://hkpmealapp.netlify.app/
 
 
 
-preview link:- [screen-capture (2).zip](https://github.com/Hridaykp/Meal_App/files/10582395/screen-capture.2.zip)
+preview link:- 
+[screen-capture (2).webm](https://user-images.githubusercontent.com/116939133/216701910-384a31ed-2fe9-404a-8ea6-b5c5674acde9.webm)
