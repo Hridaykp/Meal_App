@@ -169,10 +169,10 @@ function addRemoveToFavList(id) {
     if (exist) {
         let number = arr.indexOf(id);
         arr.splice(number, 1);
-        alert("add to favorite list");
+        alert("remove from favorite list");
     } else {
         arr.push(id);
-        alert("remove from favorite list");
+        alert("add to favorite list");
     }
     localStorage.setItem("favouritesList",JSON.stringify(arr));
     showMealList();
