@@ -4,22 +4,17 @@
     margin: 0;
     box-sizing: border-box;
     font-family: 'Nunito', sans-serif;;
-
 }
 
 body {
     width: 100%;
     background-color:#153c69;
-    color: white;
-    
-    
+    color: white;  
 }
 
-/* header heading section */
 #heading {
     margin-top: 100px;
 }
-
 
 /* header navbar */
 #nav {
@@ -29,7 +24,6 @@ body {
 }
 
 /* header search bar section */
-
 #search-bar {
     max-width: 600px;
 }
@@ -38,7 +32,6 @@ body {
     height: 50px;
     border-radius: 20px;
 }
-
 
 /* meal card */
 #card {
@@ -49,12 +42,10 @@ body {
     width: 15rem;
     height: 20rem;
 }
-
 #card img {
     border-radius: 50%;
     height: 11rem;
 }
-
 
 /* meal details container */
 #meal-details{
@@ -83,9 +74,6 @@ body {
     margin: auto;
     text-align: center;
 }
-
-
-
 
 /* favourites offcanvus */
 #favourites-body{

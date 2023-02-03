@@ -1,9 +1,9 @@
-// its make a favourites meal array if its not exist in local storage
+// it makes a favourites meal array if its not exist in local storage
 if (localStorage.getItem("favouritesList") == null) {
     localStorage.setItem("favouritesList", JSON.stringify([]));
 }
 
-// its fetch meals from api and return it
+// it fetchs meals from api and return it
 async function fetchMealsFromApi(url,value) {
     const response=await fetch(`${url+value}`);
     const meals=await response.json();
@@ -12,7 +12,7 @@ async function fetchMealsFromApi(url,value) {
 
 
 
-// its show's all meals card in main acording to search input value
+// this appears all the items by their input search
 function showMealList(){
     let inputValue = document.getElementById("my-search").value;
     let arr=JSON.parse(localStorage.getItem("favouritesList"));
@@ -78,7 +78,7 @@ function showMealList(){
 
 
 
-//its shows full meal details in main
+//for appearing meal's details
 async function showMealDetails(id) {
     let url="https://www.themealdb.com/api/json/v1/1/lookup.php?i=";
     let html="";
@@ -111,7 +111,7 @@ async function showMealDetails(id) {
 
 
 
-// its shows all favourites meals in favourites body
+// for showing fav items in fav body
 async function showFavMealList() {
     let arr=JSON.parse(localStorage.getItem("favouritesList"));
     let url="https://www.themealdb.com/api/json/v1/1/lookup.php?i=";
@@ -157,22 +157,22 @@ async function showFavMealList() {
 
 
 
-//its adds and remove meals to favourites list
+//for adding and removing fav items
 function addRemoveToFavList(id) {
     let arr=JSON.parse(localStorage.getItem("favouritesList"));
-    let contain=false;
+    let exist = false;
     for (let index = 0; index < arr.length; index++) {
         if (id==arr[index]) {
-            contain=true;
+            exist=true;
         }
     }
-    if (contain) {
+    if (exist) {
         let number = arr.indexOf(id);
         arr.splice(number, 1);
-        alert("your meal removed from your favourites list");
+        alert("add to favorite list");
     } else {
         arr.push(id);
-        alert("your meal add your favourites list");
+        alert("remove from favorite list");
     }
     localStorage.setItem("favouritesList",JSON.stringify(arr));
     showMealList();
